@@ -3,8 +3,32 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors!</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src="functions.js"></script>
+        <script src="functions.js" defer></script>
+        <div class="title-of-choice">
+            <p>Choose Your Weapon!</p>
+        </div>
+
+        <div class="player-choice">
+            <button><img id="rock" alt="image of rock" src="img/rock.png"></button>
+            <button><img id="paper" alt="image of paper" src="img/paper.png" ></button>
+            <button><img id="scissors" alt="image of scissors" src="img/scissors.png" ></button>
+        </div>
+        <div class="score-box">
+            <div class="computer">
+                <p>Computer's Score</p>
+                <div class="computer-score">0</div>
+            </div>
+            <div class="player">
+                <p>Player's Score</p>
+                <div class="player-score">0</div>
+            </div>
+        </div>
+        <div class="game-message-container">
+            <div class="game-message">Did you win?</div>
+        </div>
+
     </body>
 </html>
