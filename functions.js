@@ -1,6 +1,3 @@
-// const prompt=require("prompt-sync")({sigint:true});
-
-
 const numOfRounds = 5;
 const choiceArr = ["rock", "paper", "scissors"];
 let computerScore = 0;
@@ -38,14 +35,12 @@ function playRound (computerPlays, playerPlays) {
                 || (computerPlays === "scissors" && playerPlays === "paper")) {
         displayGameMessage(loseMessage ());
         computerScore++;
-        // save and display the score as per scenario
         displayComputerScore();
     } else if ((playerPlays === "rock" && computerPlays === "scissors")
                 || (playerPlays === "paper" && computerPlays === "rock")
                 || (playerPlays === "scissors" && computerPlays === "paper")) {
         displayGameMessage(winMessage ());
         playerScore++;
-        // save and display the score as per scenario
         displayPlayerScore();
     }
 }
@@ -146,6 +141,8 @@ function resetScoreAndMessage() {
     overlay.classList.remove('active');
 }
 
+
+
 function promptEndGameScreen() {
     endGameScreen.classList.add('active');
     overlay.classList.add('active');
@@ -160,8 +157,6 @@ function closeEndGameScreen() {
 
 const buttons = document.querySelectorAll('.choice');
 buttons.forEach((button) => button.addEventListener('click', e => {
-    // let roundEnd = displayRoundResult(e);
-    // trackScore(computerScore, playerScore, roundEnd);  
     let playerSelection = e.target.id;  
     playRound(getComputerChoice(choiceArr), playerSelection); 
     if (playerScore === 5 || computerScore === 5) {

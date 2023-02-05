@@ -43,7 +43,7 @@ p {
 }
 
 .game-message-container {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100%;
     align-items: center;
 }
@@ -104,6 +104,9 @@ button img {
 .play-again {
     font-size: 12px;
 }
+
+
+/* computer and player choice display and animation */
 
 .weapon-display {
     display: flex;
