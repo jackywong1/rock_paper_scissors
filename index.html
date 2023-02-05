@@ -3,8 +3,43 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors!</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src="functions.js"></script>
+        <script src="functions.js" defer></script>
+        <div class="title-of-choice">
+            <p>Choose Your Weapon!</p>
+        </div>
+        <div class="game-message-container">
+            <div class="game-message">Do you have what it takes?</div>
+        </div>
+        <div class="weapon-display">
+            <div class="computer-weapon">
+                <img alt="hand-motion" id="computer-hand-motion" src="img/paper-hand-motion.png">
+            </div>
+            <div class="player-weapon">
+                <img alt="hand-motion" id="player-hand-motion" src="img/paper-hand-motion-right.png">
+            </div>
+        </div>
+        <div class="score-box">
+            <div class="computer">
+                <p>Computer's Score</p>
+                <div class="computer-score">0</div>
+            </div>
+            <div class="player">
+                <p>Player's Score</p>
+                <div class="player-score">0</div>
+            </div>
+        </div>
+        <div class="player-choice">
+            <button><img class="choice" id="rock" alt="image of rock" src="img/rock.png"></button>
+            <button><img class="choice" id="paper" alt="image of paper" src="img/paper.png" ></button>
+            <button><img class="choice" id="scissors" alt="image of scissors" src="img/scissors.png" ></button>
+        </div>
+        <div class="end-game-container" id="end-game">
+            <p class="end-game-title" id="end-game-msg"></p>
+            <p class="play-again">Click anywhere to restart.</p>
+        </div>
+        <div class="overlay" id="overlay"></div>
     </body>
 </html>

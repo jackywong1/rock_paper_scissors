@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.title-of-choice {
+    background-color: #3268a8;
+}
+
+p {
+    text-align: center;
+    font-family: 'Roboto';
+    color: #111;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.player-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: scale(0.3); 
+    margin-top: 0;
+}
+
+.score-box, .game-message-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font: arial;
+    color: #111;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.score-box {
+    margin-top: 50px;
+}
+
+.game-message-container {
+    margin-top: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+
+/* fill the button container with the images */
+button img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.player, .computer {
+    text-align: center;
+}
+
+#play-again-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.end-game-container {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: beige;
+    text-align: center;
+    font-size: 30px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.end-game-container.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.play-again {
+    font-size: 12px;
+}
+
+
+/* computer and player choice display and animation */
+
+.weapon-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.computer-weapon {
+    animation: slideInRight 1s;
+}
+
+@keyframes slideInRight {
+    0% {transform: translate(-100%,0);
+        opacity: 0;}
+    100% {transform: translate(50%,0);
+        opacity: 1;}
+}
+
+.player-weapon {
+    animation: slideInLeft 1s;
+}
+
+@keyframes slideInLeft {
+    0% {transform: translate(100%,0);
+        opacity: 0;}
+    100% {transform: translate(-50%,0);
+        opacity: 1;}   
+}
+
+.computer-weapon, .player-weapon {
+    margin-top: 50px;
+    display: inline;
+}
+
