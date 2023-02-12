@@ -1,52 +1,73 @@
+@font-face {
+    font-family: 'defcon-zero-font';
+    src: url(../scissors_paper_rock/defcon-zero-font/DefconZero-4DAY.otf);
+}
+
+
 body {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #000000;
     margin: 0 0;
     padding: 0 0;
 }
 
+
 .title-of-choice {
-    background-color: #3268a8;
+    background-color: #000000;
+    font-family: 'defcon-zero-font';
+    color: #f2e900;
+    text-align: center;
+    font-size: 84px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#fff;
+    text-shadow:
+    0 0 7px #97ac11,
+    0 0 10px #97ac11,
+    0 0 14px #97ac11;
 }
 
-p {
+
+.score-box p {
     text-align: center;
-    font-family: 'Roboto';
-    color: #111;
+    font-family: 'defcon-zero-font';
+    color: #f2e900;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color:#fff;
     font-size: 24px;
-    font-weight: 900;
     text-transform: uppercase;
 }
 
+
 .player-choice {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    transform: scale(0.3); 
-    margin-top: 0;
+    /* transform: scale(0.3);  */
+    margin: 0 42%;
+    width: 15%;
+    height: 15%;
 }
+
 
 .score-box, .game-message-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font: arial;
-    color: #111;
-    font-size: 24px;
-    font-weight: 900;
+    font-family: 'defcon-zero-font';
+    color: #f2e900;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color:#fff;
+    font-size: 32px;
     text-transform: uppercase;
 }
 
-.score-box {
-    margin-top: 50px;
-}
 
 .game-message-container {
     margin-top: 50px;
     width: 100%;
     align-items: center;
 }
+
+
 
 
 /* fill the button container with the images */
@@ -56,15 +77,28 @@ button img {
     object-fit: fill;
 }
 
+
+button {
+    padding: 0 0;
+    border: none;
+    background: none;
+}
+
+
 .player, .computer {
     text-align: center;
 }
+
 
 #play-again-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-family: 'defcon-zero-font';
+    font-size: 24px;
 }
+
+
 
 
 .end-game-container {
@@ -75,16 +109,27 @@ button img {
     width: 300px;
     padding: 30px;
     border-radius: 10px;
-    background-color: beige;
+    background-color: #111;
     text-align: center;
-    font-size: 30px;
+    font-size: 72px;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
+    font-family: 'defcon-zero-font';
+    color: #f2e900;
+    text-align: center;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:#fff;
+    text-shadow:
+    0 0 7px #97ac11,
+    0 0 10px #97ac11,
+    0 0 14px #97ac11;
 }
+
 
 .end-game-container.active {
     transform: translate(-50%, -50%) scale(1);
 }
+
 
 .overlay {
     display: none;
@@ -97,16 +142,21 @@ button img {
     opacity: 0.6;
 }
 
+
 .overlay.active {
     display: block;
 }
 
+
 .play-again {
-    font-size: 12px;
+    font-size: 20px;
 }
 
 
+
+
 /* computer and player choice display and animation */
+
 
 .weapon-display {
     display: flex;
@@ -114,30 +164,36 @@ button img {
     justify-content: space-evenly;
 }
 
-.computer-weapon {
-    animation: slideInRight 1s;
+
+.computer-weapon.active {
+    animation: slideInRight 0.25s;
 }
 
+
 @keyframes slideInRight {
-    0% {transform: translate(-100%,0);
+    0% {transform: translate(-10%,0);
         opacity: 0;}
-    100% {transform: translate(50%,0);
+    100% {transform: translate(10%,0);
         opacity: 1;}
 }
 
-.player-weapon {
-    animation: slideInLeft 1s;
+
+.player-weapon.active {
+    animation: slideInLeft 0.25s;
 }
+
 
 @keyframes slideInLeft {
-    0% {transform: translate(100%,0);
+    0% {transform: translate(10%,0);
         opacity: 0;}
-    100% {transform: translate(-50%,0);
-        opacity: 1;}   
+    100% {transform: translate(-10%,0);
+        opacity: 1;}  
 }
 
+
 .computer-weapon, .player-weapon {
-    margin-top: 50px;
     display: inline;
 }
+
+
 
